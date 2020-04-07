@@ -1,0 +1,19 @@
+#which player is active?
+http://192.168.0.133/jsonrpc?request={"jsonrpc":"2.0","id":1,"method":"Player.GetActivePlayers"}
+
+#AUDIO:
+#what's playing?:
+http://192.168.0.133/jsonrpc?request={"jsonrpc":"2.0","id":1,"method":"Player.GetItem","params":{"playerid":0}}
+#aktuelle Zeit des gespielten titels + Prozent-Fortschritt bei Audio
+http://192.168.0.133/jsonrpc?request={"jsonrpc":"2.0","method":"Player.GetProperties","params":{"properties":["time","percentage","totaltime"],"playerid":0},"id":"AudioGetItem"}
+
+#VIDEO:
+#what's playing?:
+http://192.168.0.133/jsonrpc?request={"jsonrpc":"2.0","method":"Player.GetItem","params":{"properties":["title","album","artist","showtitle"],"playerid":1},"id":"VideoGetItem"}
+#aktuelle Zeit des gespielten titels + Prozent-Fortschritt bei video
+http://192.168.0.133/jsonrpc?request={"jsonrpc":"2.0","method":"Player.GetProperties","params":{"properties":["time","percentage","totaltime"],"playerid":1},"id":"VideoGetItem"}
+
+#MENUE:
+#what's currently selected?
+http://192.168.0.133/jsonrpc?request={"jsonrpc":"2.0","method":"GUI.GetProperties","params":{"properties":["currentwindow","currentcontrol"]},"id":1}
+        
