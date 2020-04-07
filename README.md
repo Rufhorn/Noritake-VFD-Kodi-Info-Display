@@ -16,6 +16,11 @@ Kodi provides a JSON-RPC API that allows to communicate through http requests. W
 The information printed on screen is customized to my needs. My character display has two lines, the fist is used to print the audio/video title if Kodi is playing anything and the screen selection otherwise. On the second line I just print the system time if nothing is playing or the audio/video supplies no progression state (as it is the case for live streaming content). Otherwise a progression bar is plotted on the full line.
 This section is kind of a playground for different things that could be printed as additional information later on.
 
+<p align="center"><img src="/images/photo5206703396432751974.jpg" width="50%">
+  
+<p align="center"><img src="/images/photo5206703396432751972.jpg" width="50%">
+
+
 ## Final Words:
 This project is not just “ready to use”, moreover it is meant to be an example for others who want to create their own custom display. Also I do not claim awards for best coding, I tried to write as clearly as possible for others to make it easy to read.
 If you have a similar display and a similar application in mind, feel free to download and modify. ;-)
