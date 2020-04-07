@@ -25,7 +25,7 @@ if __name__ == '__main__':
     
     """Create VFD and Percentage Bar Objects"""
     VFD = VFD_UI.Noritake_VFD_UI(VFD_PIN_RS, VFD_PIN_EN, VFD_PIN_CS, VFD_PIN_D0, VFD_PIN_D1, VFD_PIN_D2, VFD_PIN_D3, VFD_PIN_D4, VFD_PIN_D5, VFD_PIN_D6, VFD_PIN_D7)
-    Balken =  VFD_PercentageBar.VfdPercentageBar(VFD)#, bar_start=5, bar_stop=15, bar_sign=None)
+    Balken =  VFD_PercentageBar.VfdPercentageBar(VFD)
     
     """define timings"""
     sleep_time = 0.02
