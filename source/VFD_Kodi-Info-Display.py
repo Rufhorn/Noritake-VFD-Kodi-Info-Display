@@ -6,13 +6,19 @@ import Kodi_API_FSM
 import RPi.GPIO as GPIO
 import time
 import configparser
+import os
 GPIO.setmode(GPIO.BCM)
 
-if __name__ == '__main__':  
+if __name__ == '__main__':
+    
+    """get absolute path of this folder to ensure loading of the ini
+    file on startup when autostarting this script within rc.local"""
+    This_Folder = os.path.dirname(os.path.abspath(__file__))
+    Config_File = os.path.join(This_Folder, 'config.ini')
     
     """define config destination"""
     iniData = configparser.ConfigParser()
-    iniData.read('config.ini', encoding='utf-8')
+    iniData.read(Config_File, encoding='utf-8')
     
     """get pin setup from ini file"""
     VFD_PIN_RS = int(iniData.get('VFD', 'A0')) #A0 is the equiv to "register select" for HD44780
