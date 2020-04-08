@@ -1,5 +1,5 @@
 # Noritake-VFD-Kodi-Info-Display
-This project is about attaching a Noritake VFD character display to a Raspberry Pi and print basic player information given by a Kodi media center in your local network.
+This project is about attaching a Noritake VFD character display to a Raspberry Pi for printing basic player information given by a Kodi media center in your local network.
 
 ## Background:
 For quite some time I use a Raspberry Pi 3 driven Kodi media center for playing videos and streaming music from a local hard drive as well as from the internet (e.g. radio). The Pi is attached to a AV-receiver unit which, in turn, is attached to my TV. Therefore music can be played by keeping the TV switched off, but every time I want to change the music source I would have to turn on the TV and turn it off again. In order to avoid this I wanted to attach a small character display to the Pi, that prints the current selection and some basic playing information like the title and a progression bar.
