@@ -7,9 +7,15 @@ import RPi.GPIO as GPIO
 import time
 import configparser
 import os
+import VFD_ShutDown
+
+"""setup GPIO mode"""
 GPIO.setmode(GPIO.BCM)
 
 if __name__ == '__main__':
+    
+    """recognize shutdown"""
+    killer = VFD_ShutDown.ShutDownIndicator()
     
     """get absolute path of this folder to ensure loading of the ini
     file on startup when autostarting this script within rc.local"""
@@ -47,7 +53,7 @@ if __name__ == '__main__':
     next_poll = time.time() + sleep_time
         
     try:
-        while True:
+        while not killer.exit_operation:
             
             """time for next poll?"""
             if time.time() > next_poll:
@@ -63,6 +69,8 @@ if __name__ == '__main__':
                 
             
     finally:
+        
+        """clear and clean up"""
         VFD.clear_display()
         GPIO.cleanup()
       
